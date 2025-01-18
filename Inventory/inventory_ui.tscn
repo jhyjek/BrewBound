@@ -6,15 +6,15 @@
 [node name="Inventory_UI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 143.0
+offset_bottom = 22.0
 script = ExtResource("1_b6g18")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_right = 101.0
-offset_bottom = 16.0
-theme_override_constants/h_separation = 17
+offset_right = 142.0
+offset_bottom = 22.0
+theme_override_constants/h_separation = 24
 columns = 6
 
 [node name="Inv_Slots1" parent="GridContainer" instance=ExtResource("2_gj0k3")]
