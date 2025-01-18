@@ -7,12 +7,22 @@ const JUMP_VELOCITY = -275.0
 @onready var crow = preload("res://Visual media/crowidle.png")
 @onready var wiz = preload("res://Visual media/wizidle.png")
 
+const Gravity : int = 1000
+const  max_vel : int = 600
+const flap_speed : int = -500
+var crowmode :bool = false
+
+
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("E"):
 		player_sprite.texture = crow
+		set crowmode = true
+		
 	
-	
+func _physics_process(delta: float) -> void:
+	if crowmode = true
 	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
