@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://jw81mvxqton8"]
+
+[ext_resource type="Script" path="res://Scripts/settings.gd" id="1_362jv"]
+[ext_resource type="Texture2D" uid="uid://ciqpgxbnhfmcp" path="res://volume-up.png" id="2_8wahu"]
+[ext_resource type="Texture2D" uid="uid://bwmgl62ua22ac" path="res://volume-mute.png" id="3_2wrxr"]
+[ext_resource type="AudioStream" uid="uid://dldtwlfpq7iw6" path="res://random-thoughts-20586.mp3" id="4_g7cn3"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_362jv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 78.0
+offset_top = 20.0
+offset_right = -536.0
+offset_bottom = -577.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+min_value = -30.0
+max_value = 20.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 59.0
+offset_bottom = 53.0
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("2_8wahu")
+texture_pressed = ExtResource("3_2wrxr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_g7cn3")
+autoplay = true
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]
