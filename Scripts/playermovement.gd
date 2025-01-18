@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var player_sprite = $Sprite2D
-const SPEED = 150.0
+const SPEED = 100.0
 const JUMP_VELOCITY = -275.0
 @onready var animation = $AnimationPlayer
 @onready var crow = preload("res://Visual media/crowidle.png")
@@ -18,11 +18,9 @@ var crowmode :bool = false
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("E"):
 		player_sprite.texture = crow
-		set crowmode = true
+	
 		
 	
-func _physics_process(delta: float) -> void:
-	if crowmode = true
 	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -42,6 +40,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("A", "D")
 	if direction:
 		velocity.x = direction * SPEED
+		animation.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		animation.play("idle") 
