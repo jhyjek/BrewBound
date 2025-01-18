@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d18ys6g3ge3ga"]
+
+[ext_resource type="Texture2D" uid="uid://dpi2j666jef45" path="res://Inventory/Visual Media Inv/Inventory_Slots.png" id="1_m2i6j"]
+
+[node name="Inv_Slots" type="Panel"]
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m2i6j")
+centered = false
+
+[node name="Item" type="Sprite2D" parent="."]

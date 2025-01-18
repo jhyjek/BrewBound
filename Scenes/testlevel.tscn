@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://djtqgnis6wt27"]
+[gd_scene load_steps=9 format=3 uid="uid://djtqgnis6wt27"]
 
 [ext_resource type="PackedScene" uid="uid://b77xrr0cg6mdt" path="res://Scenes/player.tscn" id="2_4twt1"]
 [ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/tileset16.png" id="2_u4al5"]
+[ext_resource type="Resource" uid="uid://cc60gavwxe70u" path="res://Inventory/Player_Inventory.tres" id="3_mxcc8"]
 [ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/Sprite-0002.png" id="3_ql1om"]
+[ext_resource type="PackedScene" uid="uid://bqg6uesjwwipj" path="res://Inventory/inventory_ui.tscn" id="5_boyj0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wq7lc"]
 texture = ExtResource("2_u4al5")
@@ -81,6 +83,7 @@ layer_0/tile_data = PackedInt32Array(65480, 1703937, 30, 65481, 1703937, 30, 654
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4twt1")]
 position = Vector2(-833, -38)
+inv = ExtResource("3_mxcc8")
 
 [node name="Sprite-0002" type="Sprite2D" parent="."]
 modulate = Color(2, 2, 1, 1)
@@ -91,3 +94,19 @@ texture = ExtResource("3_ql1om")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_616y6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("5_boyj0")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -248.0
+offset_top = -103.0
+offset_right = -147.0
+offset_bottom = -86.9999
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(5, 5)

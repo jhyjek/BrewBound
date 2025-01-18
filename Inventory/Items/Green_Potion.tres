@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Inv_Items" load_steps=3 format=3 uid="uid://tfmgqdc0k2x6"]
+
+[ext_resource type="Script" path="res://Inventory/Inventory_Item.gd" id="1_qspx8"]
+[ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/Sprite-0002.png" id="2_3eefe"]
+
+[resource]
+script = ExtResource("1_qspx8")
+name = "Green_Potion"
+texture = ExtResource("2_3eefe")
