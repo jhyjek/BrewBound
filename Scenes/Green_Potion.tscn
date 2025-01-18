@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7y1ye0vsoplt"]
+
+[ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/Sprite-0002.png" id="1_2t44r"]
+[ext_resource type="Script" path="res://Scripts/Green_Potion.gd" id="2_c746j"]
+[ext_resource type="Resource" uid="uid://tfmgqdc0k2x6" path="res://Inventory/Items/Green_Potion.tres" id="3_hfevb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vhhda"]
+radius = 6.0
+
+[node name="Area2D" type="Area2D"]
+position = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2t44r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_vhhda")
+script = ExtResource("2_c746j")
+item = ExtResource("3_hfevb")
+
+[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_area_2d_body_entered"]

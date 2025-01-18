@@ -4,13 +4,14 @@ extends Control
 @onready var slots: Array = $GridContainer.get_children()
 
 func update_slots():
-	for i in range(min(inv.items.size(), slots.size())):
-		slots[i].update(inv.items[i])
+	for i in range(min(inv.slots.size(), slots.size())):
+		slots[i].update(inv.slots[i])
 	
 func _ready() -> void:
+	visible = true
 	update_slots()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	visible = true
+	inv.update.connect(update_slots)

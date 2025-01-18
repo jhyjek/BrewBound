@@ -1,9 +1,32 @@
-[gd_resource type="Resource" script_class="Inv" load_steps=4 format=3 uid="uid://cc60gavwxe70u"]
+[gd_resource type="Resource" script_class="Inv" load_steps=9 format=3 uid="uid://cc60gavwxe70u"]
 
-[ext_resource type="Script" path="res://Inventory/Inventory_Item.gd" id="1_yatwc"]
-[ext_resource type="Resource" uid="uid://tfmgqdc0k2x6" path="res://Inventory/Items/Green_Potion.tres" id="2_8w1s0"]
+[ext_resource type="Script" path="res://Inv_slot.gd" id="2_veyp5"]
 [ext_resource type="Script" path="res://Inventory/Inventory.gd" id="3_w6jic"]
+
+[sub_resource type="Resource" id="Resource_8x0pt"]
+script = ExtResource("2_veyp5")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_ircgp"]
+script = ExtResource("2_veyp5")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_fgf15"]
+script = ExtResource("2_veyp5")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_0310o"]
+script = ExtResource("2_veyp5")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_4h222"]
+script = ExtResource("2_veyp5")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_rqxwi"]
+script = ExtResource("2_veyp5")
+amount = 0
 
 [resource]
 script = ExtResource("3_w6jic")
-items = Array[ExtResource("1_yatwc")]([null, null, null, null, null, ExtResource("2_8w1s0")])
+slots = Array[ExtResource("2_veyp5")]([SubResource("Resource_8x0pt"), SubResource("Resource_ircgp"), SubResource("Resource_fgf15"), SubResource("Resource_0310o"), SubResource("Resource_4h222"), SubResource("Resource_rqxwi")])
