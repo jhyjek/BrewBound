@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@onready var player_sprite = $Sprite2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -275.0
 @onready var animation = $AnimationPlayer
@@ -8,6 +8,10 @@ const JUMP_VELOCITY = -275.0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
+	if velocity.x < 0:
+		player_sprite.flip_h = true
+	elif  velocity.x > 0:
+		player_sprite.flip_h = false
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
