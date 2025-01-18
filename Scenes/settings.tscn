@@ -53,5 +53,20 @@ stretch_mode = 0
 stream = ExtResource("4_g7cn3")
 autoplay = true
 
+[node name="Volume_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 302.0
+offset_top = -4.0
+offset_right = 361.0
+offset_bottom = 19.0
+text = "Volume"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 625.0
+offset_top = 18.0
+offset_right = 665.0
+offset_bottom = 41.0
+
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]
