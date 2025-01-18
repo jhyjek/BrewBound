@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bf5yuxyymy8tm"]
 
-[ext_resource type="Script" path="res://Main_Menu/main_menu.gd" id="1_u8243"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_jlxr6"]
 
 [sub_resource type="FontVariation" id="FontVariation_tv31q"]
 
@@ -27,7 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_u8243")
+script = ExtResource("1_jlxr6")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
