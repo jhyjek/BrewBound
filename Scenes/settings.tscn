@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://jw81mvxqton8"]
 
 [ext_resource type="Script" path="res://Scripts/settings.gd" id="1_362jv"]
-[ext_resource type="Texture2D" uid="uid://ciqpgxbnhfmcp" path="res://volume-up.png" id="2_8wahu"]
-[ext_resource type="Texture2D" uid="uid://bwmgl62ua22ac" path="res://volume-mute.png" id="3_2wrxr"]
+[ext_resource type="Texture2D" uid="uid://ciqpgxbnhfmcp" path="res://png/volume-up.png" id="2_8wahu"]
+[ext_resource type="Texture2D" uid="uid://bwmgl62ua22ac" path="res://png/volume-mute.png" id="3_2wrxr"]
 [ext_resource type="AudioStream" uid="uid://dldtwlfpq7iw6" path="res://random-thoughts-20586.mp3" id="4_g7cn3"]
 
 [node name="Settings" type="Control"]
