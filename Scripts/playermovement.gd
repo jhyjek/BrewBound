@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -275.0
+@onready var animation = $AnimationPlayer
 
 
 func _physics_process(delta: float) -> void:
@@ -21,5 +22,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		animation.play("idle") 
 
 	move_and_slide()
