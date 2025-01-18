@@ -22,6 +22,9 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_7jvmp"]
+resource_name = "crowidle"
+
 [sub_resource type="Animation" id="Animation_27ltr"]
 resource_name = "idle"
 tracks/0/type = "value"
@@ -36,9 +39,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 1, 0]
 }
-
-[sub_resource type="Animation" id="Animation_7jvmp"]
-resource_name = "crowidle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_enlrr"]
 _data = {
