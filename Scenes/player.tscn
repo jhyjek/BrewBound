@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b77xrr0cg6mdt"]
+
+[ext_resource type="Texture2D" uid="uid://cd1wciqd3f31y" path="res://Visual media/fuck.jpg" id="1_7skfe"]
+[ext_resource type="Script" path="res://Scripts/playermovement.gd" id="1_ikdtq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dwj1"]
+size = Vector2(10.5, 30)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ikdtq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, 0)
+shape = SubResource("RectangleShape2D_3dwj1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.75, 2.75)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.46
+drag_vertical_offset = 0.35
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.25, -9.53674e-07)
+scale = Vector2(0.0153061, 0.0777202)
+texture = ExtResource("1_7skfe")
