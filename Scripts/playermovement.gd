@@ -4,9 +4,16 @@ extends CharacterBody2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -275.0
 @onready var animation = $AnimationPlayer
-@onready var crow ="res://Visual media/crowidle.png"
+@onready var crow = preload("res://Visual media/crowidle.png")
+@onready var wiz = preload("res://Visual media/wizidle.png")
 
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("E"):
+		player_sprite.texture = crow
+	
+	
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if velocity.x < 0:
@@ -28,6 +35,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		animation.play("idle") 
+		
 		
 
 	move_and_slide()
