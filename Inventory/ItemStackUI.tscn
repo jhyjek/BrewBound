@@ -9,6 +9,7 @@ script = ExtResource("1_wt5xo")
 position = Vector2(11, 10)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = -4.0
 offset_top = -5.0
 offset_right = 10.0

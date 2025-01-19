@@ -12,7 +12,7 @@ script = ExtResource("1_b6g18")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 0
-offset_right = 142.0
+offset_right = 182.0
 offset_bottom = 22.0
 theme_override_constants/h_separation = 24
 columns = 6

@@ -33,14 +33,30 @@ func ConnectSlots():
 		slot.pressed.connect(callable)
 
 func OnSlotClicked(slot):
+	if slot.IsEmpty() && ItemInHand:
+		InsertItemInSlot(slot)
+		return
+	if !ItemInHand:
+		TakeItemFromSlot(slot)
+	
+func TakeItemFromSlot(slot):
 	ItemInHand = slot.TakeItem()
 	add_child(ItemInHand)
 	UpdateItemInHand()
+
+func InsertItemInSlot(slot):
+	var item = ItemInHand
+	
+	remove_child(ItemInHand)
+	ItemInHand = null
+	
+	slot.insert(item)
 
 func UpdateItemInHand():
 	if !ItemInHand: 
 		return
 	ItemInHand.global_position = get_global_mouse_position() - ItemInHand.size / 2
+	print("cool")
 
 func _input(event):
 	UpdateItemInHand()

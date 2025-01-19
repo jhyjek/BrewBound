@@ -18,3 +18,6 @@ func TakeItem():
 	BackgroundSprite.frame = 0
 	
 	return item
+	
+func IsEmpty():
+	return !ItemStackUI
