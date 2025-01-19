@@ -4,6 +4,8 @@ extends Control
 @onready var itemStackUIClass = preload("res://Inventory/ItemStackUI.tscn")
 @onready var slots: Array = $GridContainer.get_children()
 
+var ItemInHand: ItemStackUI
+
 func update_slots():
 	for i in range(min(inv.slots.size(), slots.size())):
 		var InventorySlot: InvSlot = inv.slots[i]
@@ -31,4 +33,14 @@ func ConnectSlots():
 		slot.pressed.connect(callable)
 
 func OnSlotClicked(slot):
-	pass
+	ItemInHand = slot.TakeItem()
+	add_child(ItemInHand)
+	UpdateItemInHand()
+
+func UpdateItemInHand():
+	if !ItemInHand: 
+		return
+	ItemInHand.global_position = get_global_mouse_position() - ItemInHand.size / 2
+
+func _input(event):
+	UpdateItemInHand()

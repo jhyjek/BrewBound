@@ -6,6 +6,7 @@
 script = ExtResource("1_wt5xo")
 
 [node name="Item_display" type="Sprite2D" parent="."]
+position = Vector2(11, 10)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -4.0

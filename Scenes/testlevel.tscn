@@ -106,3 +106,6 @@ offset_bottom = -108.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(5, 5)
+
+[node name="Area2D2" parent="." instance=ExtResource("4_rl40a")]
+position = Vector2(-729, -39)

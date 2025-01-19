@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dpi2j666jef45" path="res://Inventory/Visual Media Inv/Inventory_Slots.png" id="1_m2i6j"]
 
 [node name="Inv_Slots" type="Button"]
-offset_right = 16.0
-offset_bottom = 16.0
+offset_right = 22.0
+offset_bottom = 22.0
 script = ExtResource("1_fa1pn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
