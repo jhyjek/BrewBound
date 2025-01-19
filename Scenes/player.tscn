@@ -60,7 +60,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_muka5"]
 resource_name = "jump"
 length = 0.5
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -114,7 +114,7 @@ drag_vertical_offset = 0.35
 texture_filter = 1
 texture = ExtResource("2_f1iih")
 hframes = 13
-frame = 10
+frame = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 6)
