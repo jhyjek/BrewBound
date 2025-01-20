@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://djtqgnis6wt27"]
+[gd_scene load_steps=11 format=3 uid="uid://djtqgnis6wt27"]
 
 [ext_resource type="Texture2D" uid="uid://dttl0y7e57o7m" path="res://Visual media/tilesetgrass.png" id="1_iw5iu"]
 [ext_resource type="PackedScene" uid="uid://b77xrr0cg6mdt" path="res://Scenes/player.tscn" id="2_4twt1"]
 [ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/tileset16.png" id="2_u4al5"]
 [ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/Sprite-0002.png" id="3_ql1om"]
 [ext_resource type="Texture2D" uid="uid://eb5sc5nrnns" path="res://Visual media/alctableplaceholder.png" id="4_10dvc"]
+[ext_resource type="Texture2D" uid="uid://cw7mfceab8mmr" path="res://Visual media/tree.png" id="6_40im2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pmwf"]
 texture = ExtResource("1_iw5iu")
@@ -245,3 +246,7 @@ environment = SubResource("Environment_616y6")
 [node name="Alctable" type="Sprite2D" parent="."]
 position = Vector2(-754, -17)
 texture = ExtResource("4_10dvc")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-334, -63)
+texture = ExtResource("6_40im2")
