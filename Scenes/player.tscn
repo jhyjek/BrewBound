@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b77xrr0cg6mdt"]
 
 [ext_resource type="Script" path="res://Scripts/playermovement.gd" id="1_ikdtq"]
-[ext_resource type="Texture2D" uid="uid://vqmcvnlb74uv" path="res://Visual media/wizidlewalk.png" id="2_f1iih"]
+[ext_resource type="Texture2D" uid="uid://vqmcvnlb74uv" path="res://Visual media/Characters/wizidlewalk.png" id="2_f1iih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qrjy"]
 size = Vector2(18, 20)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jh00sbnjccfu"
-path="res://.godot/imported/wizidle.png-37563724267f7b9df1248338ed427259.ctex"
+uid="uid://cw7mfceab8mmr"
+path="res://.godot/imported/tree.png-9f744d319a89df96617df317461515a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual media/wizidle.png"
-dest_files=["res://.godot/imported/wizidle.png-37563724267f7b9df1248338ed427259.ctex"]
+source_file="res://Visual media/sprites/tree.png"
+dest_files=["res://.godot/imported/tree.png-9f744d319a89df96617df317461515a4.ctex"]
 
 [params]
 
