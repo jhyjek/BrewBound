@@ -104,9 +104,9 @@ _data = {
 script = ExtResource("1_ikdtq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -80)
 zoom = Vector2(4, 4)
 drag_horizontal_enabled = true
-drag_vertical_enabled = true
 drag_horizontal_offset = 0.46
 drag_vertical_offset = 0.35
 

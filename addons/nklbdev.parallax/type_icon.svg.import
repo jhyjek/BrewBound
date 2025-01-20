@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4t27je8od2j4"
-path="res://.godot/imported/6.png-2033ba369ebf446806ef99fd73689e2f.ctex"
+uid="uid://bcwgjego6ds1w"
+path="res://.godot/imported/type_icon.svg-7f41329f71cac632a6061f37ed722b27.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual media/Parallax/6.png"
-dest_files=["res://.godot/imported/6.png-2033ba369ebf446806ef99fd73689e2f.ctex"]
+source_file="res://addons/nklbdev.parallax/type_icon.svg"
+dest_files=["res://.godot/imported/type_icon.svg-7f41329f71cac632a6061f37ed722b27.ctex"]
 
 [params]
 
@@ -32,3 +33,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=true
+editor/convert_colors_with_editor_theme=false
