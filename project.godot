@@ -14,6 +14,10 @@ config/name="BrewBound"
 run/main_scene="res://Scenes/testlevel.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 A={
