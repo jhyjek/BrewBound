@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b77xrr0cg6mdt"]
+[gd_scene load_steps=12 format=3 uid="uid://b77xrr0cg6mdt"]
 
 [ext_resource type="Script" path="res://Scripts/playermovement.gd" id="1_ikdtq"]
+[ext_resource type="Resource" uid="uid://bo3cypo00akwa" path="res://Inventory/PlayerInventory.tres" id="2_1k3bn"]
 [ext_resource type="Texture2D" uid="uid://vqmcvnlb74uv" path="res://Visual media/wizidlewalk.png" id="2_f1iih"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qrjy"]
-size = Vector2(18, 20)
 
 [sub_resource type="Animation" id="Animation_wovar"]
 length = 0.001
@@ -100,8 +98,12 @@ _data = {
 "walk": SubResource("Animation_rbqc5")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qrjy"]
+size = Vector2(18, 20)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_ikdtq")
+inventory = ExtResource("2_1k3bn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
@@ -116,11 +118,20 @@ texture = ExtResource("2_f1iih")
 hframes = 13
 frame = 7
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 6)
-shape = SubResource("RectangleShape2D_1qrjy")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_enlrr")
 }
+
+[node name="hitBox" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_1qrjy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 6)
+shape = SubResource("RectangleShape2D_1qrjy")
+
+[connection signal="area_entered" from="hitBox" to="." method="_on_hit_box_area_entered"]
