@@ -264,6 +264,12 @@ offset_bottom = 70.0
 [node name="Area2D2" parent="." instance=ExtResource("6_1n2b7")]
 position = Vector2(-703, -50)
 
+[node name="Area2D3" parent="." instance=ExtResource("6_1n2b7")]
+position = Vector2(-758, -29)
+
+[node name="Area2D4" parent="." instance=ExtResource("6_1n2b7")]
+position = Vector2(-725, -31)
+
 [connection signal="area_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="area_shape_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
@@ -272,3 +278,9 @@ position = Vector2(-703, -50)
 [connection signal="area_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="area_shape_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D3" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D3" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D3" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_body_entered"]
