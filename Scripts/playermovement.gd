@@ -1,23 +1,30 @@
 extends CharacterBody2D
 
-@onready var animation = $AnimationPlayer
 @onready var player_sprite = $Sprite2D
-
-const SPEED = 110.0
+const SPEED = 150.0
 const JUMP_VELOCITY = -275.0
+@onready var animation = $AnimationPlayer
+@onready var crow = preload("res://Visual media/crowidle.png")
+@onready var wiz = preload("res://Visual media/wizidle.png")
 
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("E"):
+		player_sprite.texture = crow
+	
+	
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
 	if velocity.x < 0:
 		player_sprite.flip_h = true
 	elif  velocity.x > 0:
 		player_sprite.flip_h = false
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if (Input.is_action_just_pressed("space") or Input.is_action_just_pressed("W")) and is_on_floor():
+	if Input.is_action_just_pressed("space") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -27,17 +34,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		animation.play("idle") 
+		
+		
 
 	move_and_slide()
-	handle_animation()
-
-func handle_animation():
-	if is_on_floor():
-		if velocity:
-			animation.play("walk")
-		else:
-			animation.play("idle")
-	else:
-		animation.play("jump")
-		
-		
