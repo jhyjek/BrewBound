@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bicutp7470w5r"
-<<<<<<<< HEAD:Visual media/sprites/Sprite-0002.png.import
-path="res://.godot/imported/Sprite-0002.png-d1665a443ea66845a3460a87f68b22bb.ctex"
-========
+uid="uid://ccp3ppjqq2oj5"
 path="res://.godot/imported/Green_Potion.png-8fcb4babdddb4be0dbae0797ba585abd.ctex"
->>>>>>>> Inventory-System:Inventory/Art/Green_Potion.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Visual media/sprites/Sprite-0002.png.import
-source_file="res://Visual media/sprites/Sprite-0002.png"
-dest_files=["res://.godot/imported/Sprite-0002.png-d1665a443ea66845a3460a87f68b22bb.ctex"]
-========
 source_file="res://Inventory/Art/Green_Potion.png"
 dest_files=["res://.godot/imported/Green_Potion.png-8fcb4babdddb4be0dbae0797ba585abd.ctex"]
->>>>>>>> Inventory-System:Inventory/Art/Green_Potion.png.import
 
 [params]
 

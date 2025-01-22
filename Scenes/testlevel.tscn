@@ -1,17 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://djtqgnis6wt27"]
+[gd_scene load_steps=14 format=3 uid="uid://djtqgnis6wt27"]
 
 [ext_resource type="Script" path="res://Scenes/Level.gd" id="1_e4gcv"]
 [ext_resource type="Texture2D" uid="uid://dttl0y7e57o7m" path="res://Visual media/TileSets/tilesetgrass.png" id="1_iw5iu"]
 [ext_resource type="PackedScene" uid="uid://b77xrr0cg6mdt" path="res://Scenes/player.tscn" id="2_4twt1"]
-[ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/tileset16.png" id="2_u4al5"]
-[ext_resource type="Texture2D" uid="uid://eb5sc5nrnns" path="res://Visual media/alctableplaceholder.png" id="4_10dvc"]
+[ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/TileSets/tileset16.png" id="2_u4al5"]
+[ext_resource type="Texture2D" uid="uid://eb5sc5nrnns" path="res://Visual media/sprites/alctableplaceholder.png" id="4_10dvc"]
 [ext_resource type="PackedScene" uid="uid://cqypah5iqvmap" path="res://Inventory/Scenes/Green_Potion.tscn" id="6_1n2b7"]
 [ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="6_2dhtq"]
-[ext_resource type="PackedScene" uid="uid://behqrk6e8bykv" path="res://Inventory/Scenes/inventory_ui.tscn" id="6_qihts"]
-[ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/TileSets/tileset16.png" id="2_u4al5"]
-[ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/sprites/Sprite-0002.png" id="3_ql1om"]
-[ext_resource type="Texture2D" uid="uid://eb5sc5nrnns" path="res://Visual media/sprites/alctableplaceholder.png" id="4_10dvc"]
 [ext_resource type="Texture2D" uid="uid://cw7mfceab8mmr" path="res://Visual media/sprites/tree.png" id="6_40im2"]
+[ext_resource type="PackedScene" uid="uid://behqrk6e8bykv" path="res://Inventory/Scenes/inventory_ui.tscn" id="6_qihts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pmwf"]
 texture = ExtResource("1_iw5iu")
@@ -304,6 +301,10 @@ position = Vector2(-758, -29)
 [node name="Area2D4" parent="." instance=ExtResource("6_1n2b7")]
 position = Vector2(-725, -31)
 
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-334, -63)
+texture = ExtResource("6_40im2")
+
 [connection signal="area_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="area_shape_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
@@ -318,7 +319,3 @@ position = Vector2(-725, -31)
 [connection signal="area_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="area_shape_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
 [connection signal="body_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_body_entered"]
-
-[node name="Tree" type="Sprite2D" parent="."]
-position = Vector2(-334, -63)
-texture = ExtResource("6_40im2")
