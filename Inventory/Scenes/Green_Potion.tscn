@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqypah5iqvmap"]
 
 [ext_resource type="Script" path="res://Green_potion.gd" id="1_ughco"]
-[ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Inventory/Art/Green_Potion.png" id="2_goust"]
+[ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/sprites/Sprite-0002.png" id="2_goust"]
 [ext_resource type="Resource" uid="uid://ckrgq1q1o4sk4" path="res://Inventory/Items/Green_Potion.tres" id="2_lhw3o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b4oie"]
