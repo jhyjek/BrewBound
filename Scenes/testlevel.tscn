@@ -1,7 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://djtqgnis6wt27"]
 
+[ext_resource type="Script" path="res://Scenes/Level.gd" id="1_e4gcv"]
 [ext_resource type="Texture2D" uid="uid://dttl0y7e57o7m" path="res://Visual media/TileSets/tilesetgrass.png" id="1_iw5iu"]
 [ext_resource type="PackedScene" uid="uid://b77xrr0cg6mdt" path="res://Scenes/player.tscn" id="2_4twt1"]
+[ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/tileset16.png" id="2_u4al5"]
+[ext_resource type="Texture2D" uid="uid://eb5sc5nrnns" path="res://Visual media/alctableplaceholder.png" id="4_10dvc"]
+[ext_resource type="PackedScene" uid="uid://cqypah5iqvmap" path="res://Inventory/Scenes/Green_Potion.tscn" id="6_1n2b7"]
+[ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="6_2dhtq"]
+[ext_resource type="PackedScene" uid="uid://behqrk6e8bykv" path="res://Inventory/Scenes/inventory_ui.tscn" id="6_qihts"]
 [ext_resource type="Texture2D" uid="uid://bgk33sny461h1" path="res://Visual media/TileSets/tileset16.png" id="2_u4al5"]
 [ext_resource type="Texture2D" uid="uid://bicutp7470w5r" path="res://Visual media/sprites/Sprite-0002.png" id="3_ql1om"]
 [ext_resource type="Texture2D" uid="uid://eb5sc5nrnns" path="res://Visual media/sprites/alctableplaceholder.png" id="4_10dvc"]
@@ -253,6 +259,7 @@ glow_hdr_scale = 0.93
 glow_hdr_luminance_cap = 32.28
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_e4gcv")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -263,19 +270,54 @@ layer_0/tile_data = PackedInt32Array(65480, 1703937, 30, 65481, 1703937, 30, 654
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4twt1")]
 position = Vector2(-833, -38)
 
-[node name="Sprite-0002" type="Sprite2D" parent="."]
-modulate = Color(2, 2, 1, 1)
-texture_filter = 1
-position = Vector2(-805, -4)
-scale = Vector2(0.483, 0.5)
-texture = ExtResource("3_ql1om")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_616y6")
 
 [node name="Alctable" type="Sprite2D" parent="."]
 position = Vector2(-754, -17)
 texture = ExtResource("4_10dvc")
+
+[node name="Area2D" parent="." instance=ExtResource("6_1n2b7")]
+position = Vector2(-795, -10)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("6_2dhtq")
+
+[node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("6_qihts")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -70.0
+offset_right = 124.0
+offset_bottom = 70.0
+
+[node name="Area2D2" parent="." instance=ExtResource("6_1n2b7")]
+position = Vector2(-703, -50)
+
+[node name="Area2D3" parent="." instance=ExtResource("6_1n2b7")]
+position = Vector2(-758, -29)
+
+[node name="Area2D4" parent="." instance=ExtResource("6_1n2b7")]
+position = Vector2(-725, -31)
+
+[connection signal="area_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="closed" from="CanvasLayer/InventoryUI" to="." method="_on_inventory_ui_closed"]
+[connection signal="opened" from="CanvasLayer/InventoryUI" to="." method="_on_inventory_ui_opened"]
+[connection signal="area_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D2" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D3" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D3" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D3" to="CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="area_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_shape_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D4" to="CharacterBody2D" method="_on_area_2d_body_entered"]
 
 [node name="Tree" type="Sprite2D" parent="."]
 position = Vector2(-334, -63)

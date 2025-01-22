@@ -3,8 +3,12 @@ extends CharacterBody2D
 @onready var animation = $AnimationPlayer
 @onready var player_sprite = $Sprite2D
 
+@export var inventory : Inventory
+
 const SPEED = 110.0
 const JUMP_VELOCITY = -275.0
+
+
 
 
 func _physics_process(delta: float) -> void:
@@ -39,5 +43,7 @@ func handle_animation():
 			animation.play("idle")
 	else:
 		animation.play("jump")
-		
-		
+
+func _on_hit_box_area_entered(area: Area2D) -> void:
+	if area.has_method("collect"):
+		area.collect(inventory)
