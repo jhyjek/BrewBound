@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://uq8y33dcbw5c"]
+[gd_scene load_steps=3 format=3 uid="uid://uq8y33dcbw5c"]
 
+[ext_resource type="Script" path="res://Inventory/Scenes/hotbar.gd" id="1_flyko"]
 [ext_resource type="PackedScene" uid="uid://drag8kgrersuw" path="res://Inventory/Scenes/Hotbar_slot.tscn" id="1_wby8b"]
 
 [node name="Hotbar" type="HBoxContainer"]
 custom_minimum_size = Vector2(356, 68)
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_flyko")
 
 [node name="HotbarSlot" parent="." instance=ExtResource("1_wby8b")]
 layout_mode = 2
