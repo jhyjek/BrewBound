@@ -6,6 +6,7 @@ extends HBoxContainer
 
 func _ready() -> void:
 	update()
+	inventory.updated.connect(update)
 
 func update() -> void:
 	for i in range(slots.size()):
