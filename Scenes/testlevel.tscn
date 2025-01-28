@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://djtqgnis6wt27"]
+[gd_scene load_steps=15 format=3 uid="uid://djtqgnis6wt27"]
 
 [ext_resource type="Script" path="res://Scenes/Level.gd" id="1_e4gcv"]
 [ext_resource type="Texture2D" uid="uid://dttl0y7e57o7m" path="res://Visual media/TileSets/tilesetgrass.png" id="1_iw5iu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scenes/canvas_layer.gd" id="6_2dhtq"]
 [ext_resource type="Texture2D" uid="uid://cw7mfceab8mmr" path="res://Visual media/sprites/tree.png" id="6_40im2"]
 [ext_resource type="PackedScene" uid="uid://behqrk6e8bykv" path="res://Inventory/Scenes/inventory_ui.tscn" id="6_qihts"]
+[ext_resource type="PackedScene" uid="uid://uq8y33dcbw5c" path="res://Inventory/Scenes/hotbar.tscn" id="9_k5r6a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pmwf"]
 texture = ExtResource("1_iw5iu")
@@ -291,6 +292,12 @@ offset_left = -124.0
 offset_top = -70.0
 offset_right = 124.0
 offset_bottom = 70.0
+
+[node name="Hotbar" parent="CanvasLayer" instance=ExtResource("9_k5r6a")]
+offset_left = 401.0
+offset_top = 563.0
+offset_right = 757.0
+offset_bottom = 631.0
 
 [node name="Area2D2" parent="." instance=ExtResource("6_1n2b7")]
 position = Vector2(-703, -50)
