@@ -10,4 +10,3 @@ func update_to_slot(slot:InventorySlot) -> void:
 	item_stack_ui.inventorySlot = slot
 	item_stack_ui.update()
 	item_stack_ui.visible = true
-	

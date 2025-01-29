@@ -25,5 +25,5 @@ func insertSlot(index: int, inventorySlot: InventorySlot):
 	removeItemAtIndex(oldIndex)
 	
 	slots[index] = inventorySlot
-	updated.emit()s
+	updated.emit()
 	

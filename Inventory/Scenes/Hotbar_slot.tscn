@@ -24,3 +24,5 @@ offset_bottom = 68.0
 
 [node name="Panel" parent="CenterContainer" instance=ExtResource("3_sokrc")]
 layout_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
